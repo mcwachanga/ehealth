@@ -1,0 +1,15 @@
+<md-card flex="70" style="margin: 32px 0;">
+    <md-card-content layout="column" >
+        <div layout="row" layout-align="space-between">
+            <h2 style="padding-left: 16px;">{{FC.title}}</h2>
+            <md-button ng-click="FC.showMap($event)">View on a map</md-button>
+        </div>
+        <input ng-model="searchFacility" placeholder="search for a facility"
+                type="text" style="width: 80%; padding: 8px;margin-left: 16px;"/>
+        <md-list>
+            <md-list-item ng-repeat="facility in FC.facilities | filter:searchFacility">
+                <span>{{facility.name}}</span>
+            </md-list-item>
+        </md-list>
+    </md-card-content>
+</md-card>

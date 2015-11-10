@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>eHealth - Kisumu county</title>
+    <link href="bower_components/angular-material/angular-material.css" rel="stylesheet">
+    <link href="bower_components/angular-material/angular-material.layouts.css" rel="stylesheet">
+    <link href="bower_components/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="styles/eHealth.css" rel="stylesheet">
+</head>
+<body layout="column" flex>
+    <div layout="row">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <span>eHealth: Kisumu County</span>
+                <!-- fill up the space between left and right area -->
+                <span flex></span>
+                <md-button ui-sref="facilities">
+                    Logout
+                </md-button>
+            </div>
+        </md-toolbar>
+    </div>
+    <div layout="row" layout-fill>
+        <md-sidenav md-is-locked-open="$mdMedia('min-width: 800px')"
+                    md-component-id="left" class="md-sidenav-left"
+                    style="border-right: 1px solid #e5e5e5;">
+            <md-list>
+                <md-list-item>
+                    <md-button flex style="text-align: left;" ui-sref="facilities({ 'type': 'hospitals'})">
+                        <i class="fa fa-search" style="margin-right: 32px;"></i>
+                        Hospitals
+                    </md-button>
+                </md-list-item>
+                <md-list-item >
+                    <md-button flex style="text-align: left;" ui-sref="facilities({ 'type': 'clinics'})">
+                        <i class="fa fa-calendar" style="margin-right: 32px;"></i>
+                        Clinics
+                    </md-button>
+                </md-list-item>
+                <md-list-item>
+                    <md-button flex style="text-align: left;" ui-sref="facilities({ 'type': 'dispensaries'})">
+                        <i class="fa fa-user-md" style="margin-right: 32px;"></i>
+                        Dispensaries
+                    </md-button>
+                </md-list-item>
+                <!--
+                <md-list-item>
+                    <md-button flex style="text-align: left;" >
+                        <i class="fa fa-refresh" style="margin-right: 32px;"></i>
+                        Medical staff
+                    </md-button>
+                </md-list-item>
+                <md-list-item>
+                    <md-button flex style="text-align: left;">
+                        <i class="fa fa-inbox" style="margin-right: 32px;"></i>
+                        Medical equipments
+                    </md-button>
+                </md-list-item>
+                -->
+            </md-list>
+        </md-sidenav>
+        <md-content layout-fill ui-view style="background: #f5f5f5; min-height: 100% !important;" layout="row" layout-align="center">
+
+        </md-content>
+    </div>
+    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-animate/angular-animate.js"></script>
+    <script type="text/javascript" src="bower_components/angular-aria/angular-aria.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-material/angular-material.js"></script>
+    <script type="text/javascript" src="bower_components/angular-messages/angular-messages.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <!-- custom scripts -->
+    <script type="text/javascript" src="app/app.js"></script>
+    <script type="text/javascript" src="scripts/controllers.js"></script>
+</body>
+</html>
